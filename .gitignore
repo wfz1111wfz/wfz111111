@@ -1,0 +1,9 @@
+# 编译产物
+build/
+
+# Qt Creator 本地用户配置（含本地绝对路径）
+*.pro.user
+.qtcreator/
+
+# 课程报告（含姓名学号，不公开）
+*.doc

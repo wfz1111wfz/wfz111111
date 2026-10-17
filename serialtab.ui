@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>SerialTab</class>
+<widget class="QWidget" name="SerialTab">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+    <!-- 【上方：独立串口配置区】 -->
+    <item>
+      <widget class="QGroupBox" name="groupBox_Serial">
+        <property name="title">
+          <string>串口配置</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_Serial">
+          <item>
+            <widget class="QLabel" name="label_SerialPort">
+              <property name="text">
+                <string>串口号:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QComboBox" name="comCom"/>
+          </item>
+          <item>
+            <widget class="QLabel" name="label_Baud">
+              <property name="text">
+                <string>波特率:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QComboBox" name="comBaud">
+              <item>
+                <property name="text">
+                  <string>9600</string>
+                </property>
+              </item>
+              <item>
+                <property name="text">
+                  <string>115200</string>
+                </property>
+              </item>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnRefresh_Serial">
+              <property name="text">
+                <string>刷新串口列表</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnOpen_Serial">
+              <property name="text">
+                <string>打开串口</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnClose_Serial">
+              <property name="text">
+                <string>关闭串口</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </widget>
+    </item>
+
+    <!-- 【下方：独立蓝牙配置区】 -->
+    <item>
+      <widget class="QGroupBox" name="groupBox_Bluetooth">
+        <property name="title">
+          <string>蓝牙配置</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_Bluetooth">
+          <item>
+            <widget class="QLabel" name="label_BtDevice">
+              <property name="text">
+                <string>蓝牙设备:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QComboBox" name="comBtDevice">
+              <!-- 修正：规范的minimumSize写法 -->
+              <property name="minimumSize">
+                <size>
+                  <width>300</width>
+                  <height>0</height>
+                </size>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnRefresh_Bt">
+              <property name="text">
+                <string>扫描蓝牙设备</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnConnect_Bt">
+              <property name="text">
+                <string>连接蓝牙</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnDisconnect_Bt">
+              <property name="text">
+                <string>断开蓝牙</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </widget>
+    </item>
+
+    <!-- 数据收发区（共用，带来源区分） -->
+    <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <!-- 接收区 -->
+        <item>
+          <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+              <string>接收数据</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+                <widget class="QCheckBox" name="chkHexRecv">
+                  <property name="text">
+                    <string>十六进制显示</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QTextEdit" name="txtRecv"/>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnClearRecv">
+                  <property name="text">
+                    <string>清空接收</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+
+        <!-- 发送区 -->
+        <item>
+          <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+              <string>发送数据</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+                <widget class="QCheckBox" name="chkHexSend">
+                  <property name="text">
+                    <string>十六进制发送</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QTextEdit" name="txtSend"/>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnSend">
+                  <property name="text">
+                    <string>发送数据</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnClearSend">
+                  <property name="text">
+                    <string>清空发送</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+      </layout>
+    </item>
+  </layout>
+</widget>
+</ui>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>飞控上位机</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <widget class="QWidget" name="tabSerial">
+       <attribute name="title">
+        <string>串口调试</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabStatus">
+       <attribute name="title">
+        <string>飞控状态</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tabSet">
+       <attribute name="title">
+        <string>飞控设置</string>
+       </attribute>
+      </widget>
+      <!-- 新增：飞行校准Tab -->
+      <widget class="QWidget" name="tabCalibrate">
+       <attribute name="title">
+        <string>飞行校准</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
